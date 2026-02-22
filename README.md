@@ -1,26 +1,47 @@
 # url-challenge-dh2026
 
-Landing website for the **DragonHack 2026 Ljubljana – URL Challenge** submission.
+Single-page team portfolio for **Team BitShift** (DragonHack 2026 URL Challenge).
 
-## Live site
+## Overview
 
-Open `index.html` directly in a browser, or serve the folder with any static host
-(GitHub Pages, Netlify, Vercel, `npx serve`, etc.).
+This project is a lightweight static website built with plain HTML, CSS, and JavaScript.
 
-## Files
+Current UI highlights:
+- Large **Team BitShift** brand in the navbar
+- Horizontally stretched **Simple Team Portfolio** hero box
+- Dark cyber style with improved green ambient fade/glow background
+- Team section with four profile cards
+- Sticky navigation with active-section highlighting on scroll
+
+## Run locally
+
+You can run it in either of these ways:
+
+1. Open [index.html](index.html) directly in your browser, or
+2. Serve the folder with a static server (example):
+
+```bash
+npx serve .
+```
+
+## Project structure
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Page structure – hero, about, features, timeline, CTA, footer |
-| `styles.css` | All styles; CSS custom properties at the top for fast theming |
-| `script.js` | Nav scroll state, mobile hamburger menu, active-link tracking |
+| [index.html](index.html) | Page layout and team content |
+| [styles.css](styles.css) | Theme, layout, typography, hero/team styling, green fade background |
+| [script.js](script.js) | Navbar scroll state + active nav link behavior |
 
-## Quick customization
+## Customize quickly
 
-1. **Colours / fonts** – edit the `:root` block at the top of `styles.css`.
-2. **Content** – every section in `index.html` has `<!-- ↓ Edit … -->` comments
-   to guide you.
-3. **Links** – replace the placeholder `href="#"` values with your real demo URL
-   and any social/team links.
-4. **Stats / timeline** – update the numbers in the hero and the `<ol>` items in
-   the timeline section.
+1. **Team text/content**: edit names, intro, and descriptions in [index.html](index.html).
+2. **Theme colors**: edit CSS variables in `:root` in [styles.css](styles.css).
+3. **Sizing/layout**:
+   - Hero box width: `.hero__inner` in [styles.css](styles.css)
+   - Team title size: `.nav__logo` in [styles.css](styles.css)
+4. **Background glow**: adjust `body::before` gradients in [styles.css](styles.css).
+
+## Notes
+
+- The custom cursor halo effect was intentionally removed.
+- No build step is required.
