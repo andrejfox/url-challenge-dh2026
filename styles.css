@@ -211,6 +211,12 @@ section {
   gap: 1.7rem;
 }
 
+.profile-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .profile-card {
   background: linear-gradient(180deg, #08110b, #050c08);
   border: 1px solid #2a4b39;
