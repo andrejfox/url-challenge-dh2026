@@ -29,4 +29,49 @@
   }
   window.addEventListener('scroll', updateActiveLink, { passive: true });
   updateActiveLink();
+
+  // Text scramble animation for hero title
+  const scrambleEl = document.querySelector('.hero__title--scramble');
+  if (scrambleEl) {
+    const targetText = scrambleEl.getAttribute('data-target');
+    const chars = 'ÄÖÜßñáéíóúâêîôûãõ!@#$%^&*()_+-=[]{}|;:,.<>?/~`';
+    let frame = 0;
+    const frameRate = 50;
+    const frameStart = 20;
+    const frameEnd = frameStart + targetText.length * 8;
+
+    function updateScramble() {
+      let output = '';
+      for (let i = 0; i < targetText.length; i++) {
+        const frameForChar = frameStart + i * 8;
+        if (frame >= frameForChar) {
+          const elapsedFrames = frame - frameForChar;
+          if (elapsedFrames > 7) {
+            output += targetText[i];
+          } else {
+            output += chars[Math.floor(Math.random() * chars.length)];
+          }
+        } else {
+          output += ' ';
+        }
+      }
+      scrambleEl.textContent = output;
+    }
+
+    function animate() {
+      updateScramble();
+      frame++;
+      if (frame <= frameEnd) {
+        requestAnimationFrame(animate);
+      } else {
+        scrambleEl.textContent = targetText;
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', animate);
+    } else {
+      animate();
+    }
+  }
 })();

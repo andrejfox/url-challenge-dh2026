@@ -181,6 +181,24 @@ section {
   line-height: 1.03;
   text-shadow: 0 0 14px rgba(134, 239, 172, 0.2);
   letter-spacing: -0.02em;
+  font-variant: tabular-nums;
+}
+
+.hero__title--scramble {
+  font-family: var(--font-mono);
+  min-height: 1.2em;
+  animation: scramble-glow 1s ease-out forwards;
+}
+
+@keyframes scramble-glow {
+  0% {
+    text-shadow: 0 0 20px rgba(134, 239, 172, 0.6), 0 0 40px rgba(34, 197, 94, 0.3);
+    opacity: 0.9;
+  }
+  100% {
+    text-shadow: 0 0 14px rgba(134, 239, 172, 0.2);
+    opacity: 1;
+  }
 }
 
 .hero__subtitle,
