@@ -31,17 +31,3 @@ npx serve .
 | [index.html](index.html) | Page layout and team content |
 | [styles.css](styles.css) | Theme, layout, typography, hero/team styling, green fade background |
 | [script.js](script.js) | Navbar scroll state + active nav link behavior |
-
-## Customize quickly
-
-1. **Team text/content**: edit names, intro, and descriptions in [index.html](index.html).
-2. **Theme colors**: edit CSS variables in `:root` in [styles.css](styles.css).
-3. **Sizing/layout**:
-   - Hero box width: `.hero__inner` in [styles.css](styles.css)
-   - Team title size: `.nav__logo` in [styles.css](styles.css)
-4. **Background glow**: adjust `body::before` gradients in [styles.css](styles.css).
-
-## Notes
-
-- The custom cursor halo effect was intentionally removed.
-- No build step is required.
