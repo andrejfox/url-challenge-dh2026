@@ -1,6 +1,7 @@
 # url-challenge-dh2026
 
 Single-page team portfolio for **Team BitShift** (DragonHack 2026 URL Challenge).
+Available at: https://andrejfox.github.io/url-challenge-dh2026
 
 ## Overview
 
