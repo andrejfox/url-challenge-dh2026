@@ -29,4 +29,25 @@
   }
   window.addEventListener('scroll', updateActiveLink, { passive: true });
   updateActiveLink();
+
+  const cursorHalo = document.createElement('div');
+  cursorHalo.className = 'cursor-halo';
+  document.body.appendChild(cursorHalo);
+
+  function setHaloPosition(event) {
+    cursorHalo.style.left = event.clientX + 'px';
+    cursorHalo.style.top = event.clientY + 'px';
+    document.body.classList.add('halo-active');
+  }
+
+  window.addEventListener('mousemove', setHaloPosition, { passive: true });
+  window.addEventListener('mousedown', function () {
+    document.body.classList.add('halo-click');
+  });
+  window.addEventListener('mouseup', function () {
+    document.body.classList.remove('halo-click');
+  });
+  window.addEventListener('mouseleave', function () {
+    document.body.classList.remove('halo-active');
+  });
 })();
