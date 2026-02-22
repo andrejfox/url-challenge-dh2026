@@ -23,11 +23,3 @@ You can run it in either of these ways:
 ```bash
 npx serve .
 ```
-
-## Project structure
-
-| File | Purpose |
-|------|---------|
-| [index.html](index.html) | Page layout and team content |
-| [styles.css](styles.css) | Theme, layout, typography, hero/team styling, green fade background |
-| [script.js](script.js) | Navbar scroll state + active nav link behavior |
